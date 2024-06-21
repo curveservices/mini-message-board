@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./partials/header.ejs') %>
+  <body>
+    <div class="mx-auto mt-10 p-4 max-w-[50rem] flex flex-col gap-4 border-black-900 rounded-lg">
+        <h1 class="text-3xl font-bold mb-4">
+          <%= title %>
+        </h1>
+        <p>Welcome to this <%= title %>
+        </p>
+        <ul class="flex flex-col gap-4 flex-1 overflow-y-scroll">
+
+          <% messages.forEach(function(message) { %>
+            <li class="p-4 border rounded-md cursor-pointer hover:bg-gray-100">
+              <div class="mb-2 flex justify-between">
+                <div class="font-bold"><%= message.user %>:</div>
+                <div class="text-sm ml-auto text-right opacity-60">
+                  <em>(<%= message.added.toLocaleString() %>)</em>
+                </div>
+              </div>
+              <p><%= message.text %></p>
+            </li>
+            <% }); %>
+        </ul>
+        <button class="w-full h-12 border border-black-900 bg-sky-700/30 rounded-lg">
+          <a href="/new">Add a new message</a>
+        </button>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('./partials/header.ejs') %>
+    <body class="">
+        <div class="bg-gray-100 mx-auto my-20 p-10 max-w-[50rem] flex flex-col gap-4 border border-black-900 rounded-lg">
+            <h1 class="text-3xl font-bold mb-4">
+                <%= title %>
+            </h1>
+            <form method="POST" action="/new">
+                <div class="flex flex-col gap-4 ">
+                    <label for="messageUser" >Name:</label>
+                    <input class="border px-4 py-2 rounded-md mb-4" type="text" id="messageUser" name="messageUser"
+                        placeholder="Enter your name" required>
+                </div>
+                <div lass="flex flex-col gap-4">
+                    <label for="messageText">Message:</label>
+                    <textarea 
+                        class="mt-2 border w-full px-4 py-2 rounded-md"
+                        type="text" 
+                        id="messageText" 
+                        name="messageText" 
+                        placeholder="Say somthing..."
+                        rows="5"
+                        required
+                        ></textarea>
+                </div>
+                <button 
+                    class="w-full h-12 border border-black-900 bg-sky-700/30 rounded-lg" 
+                    type="submit"
+                    >
+                    Submit
+                </button>
+            </form>
+            <button class="w-full h-12 border border-black-900 bg-violet-700/30 rounded-lg">
+                <a href="/">Back to Messages</a>
+            </button>
+        </div>
+        
+    </body>
+</html>
