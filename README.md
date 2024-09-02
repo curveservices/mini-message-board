@@ -70,7 +70,7 @@ const messages = [
 10. Add an “open” button or link next to every message to open a new page with the message details.
 
 ## Extra
-- 
+-  Styling added
 
 ## Languages & Tools
 
