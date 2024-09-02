@@ -32,7 +32,8 @@ The views section of this course showed me how to setup EJS in an Express projec
 
 3. Create an array at the top of your index router called messages and put a couple of sample messages inside of it.
 
-```const messages = [
+```
+const messages = [
   {
     text: "Hi there!",
     user: "Amando",
@@ -43,15 +44,18 @@ The views section of this course showed me how to setup EJS in an Express projec
     user: "Charles",
     added: new Date()
   }
-];```
+];
+```
 
 4. Next, in your index template (in the ```"views"``` folder) loop through the messages array and for each one, display the user, text and the date the message was added. Don’t forget to make your messages available to your template by including it in the ```res.render``` ‘locals’ object (e.g. ```res.render("index", { title: "Mini Messageboard", messages: messages })```).
 
 5. Set up the new message form. In the router add a ```router.get()``` for the ```"/new"``` route and point it to a template named ```"form"```. In the views directory create your ```form``` template. Add a heading, 2 inputs (one for the author’s name and one for the message text) and a submit button. To have the form make a network request you will need to define it with both a method and an action like so (we will learn how to handle forms in a later lesson):
 
-```<form method="POST" action="/new">
+```
+<form method="POST" action="/new">
    put your inputs and buttons in here!
-</form>```
+</form>
+```
 
 6. With your form set up like this, when you click on the submit button it should send a POST request to the url specified by the action attribute, so go back to your index router and add a ```router.post()``` for ```"/new"```.
 7. In order to get and use the data from your form, you will need to access the contents of your form inside ```router.post()``` as an object called ```req.body```. The individual fields inside the body object are named according to the name attribute on your inputs (the value of ```<input name="messageText">``` will show up as ```req.body.messageText``` inside the ```router.post``` function). For this to work as intended, you’ll need to use a app level Express middleware called ```express.urlencoded()``` to parse the form data into req.body. You can set this up by adding the following line to your app setup:
