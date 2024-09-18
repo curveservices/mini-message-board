@@ -70,6 +70,10 @@ const messages = [
 10. Add an “open” button or link next to every message to open a new page with the message details.
 
 ## Extra
+From Lesson [Using PostgreSQL](https://www.theodinproject.com/lessons/nodejs-using-postgresql) I was told to go back to this project and implement it with a PostgreSQL db and pg.
+- Deploy a new db on a hosting service you choose, and obtain its connection information. I used railway Postgres
+- Create a messages table, populate it with data if you wish. This should be done via a script.
+- Add the necessary environment variables, create a pool, and implement the required db functions.
 -  Styling added
 
 ## Languages & Tools
@@ -80,6 +84,8 @@ const messages = [
     <img width="100" alt="nodejs" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" /></a> 
 <a href="https://expressjs.com/">
     <img width="100" alt="express" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original-wordmark.svg" /></a> 
+<a href="https://www.postgresql.org/">
+    <img width="100" alt="PostgreSQL" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original-wordmark.svg" /></a> 
 <a href="https://css3.com/">
     <img width="100" alt="CSS3" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-plain-wordmark.svg" /></a> 
 <a href="https://git-scm.com/">
