@@ -12,7 +12,7 @@ const getAllMessages = async () => {
 
 const addMessage = async (text, user) => {
     try {
-        await pool.query('INSERT INTO messages (text, "user") VALUE ($1, $2)', [text, user]);
+        await pool.query('INSERT INTO messages (text, "user") VALUES ($1, $2)', [text, user]);
     } catch (error) {
         console.error('Error adding message', error);
         throw error;
