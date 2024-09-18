@@ -2,7 +2,7 @@ const pool = require('./pool');
 
 const getAllMessages = async () => {
   try {
-    const { rows: messages } = await pool.query('SELECT * FROM messages ORDER BY added DESC');
+    const { rows: messages } = await pool.query('SELECT * FROM messages ORDER BY added ASC');
     return messages;
   } catch (error) {
     console.error('Error fetching messages', error);
